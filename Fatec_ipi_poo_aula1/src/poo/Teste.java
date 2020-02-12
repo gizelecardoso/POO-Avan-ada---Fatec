@@ -1,3 +1,5 @@
+package poo;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -15,41 +17,60 @@ public class Teste {
 			int tipo = 1 + gerador.nextInt(4);//parametro que limita até onde será criado o random
 						
 			System.out.println("Tipo" + tipo + "\n");
-			empregados.add(new Empregado(tipo));	
+			
+		
 			
 			if(tipo == 1) {
+				
+				Tipo1 tipo1 = new Tipo1();
+				
 				double salario = 1500 + gerador.nextDouble() * 3500;
-				empregados.get(i).setSalario(salario);
+				tipo1.setSalario(salario);
+				
+				empregados.add(tipo1);
+				
 			} else if(tipo == 2) {
+				
+				Tipo2 tipo2 = new Tipo2();
+				
 				double salario = 1200 + gerador.nextDouble() * 1000;
 				double percentualComissao = gerador.nextDouble();
 				
-				empregados.get(i).setSalario(salario);
-				empregados.get(i).setPercentualComissao(percentualComissao);
+				tipo2.setSalario(salario);
+				tipo2.setPercentualComissao(percentualComissao);
+				
+				empregados.add(tipo2);
+				
 			} else if(tipo == 3) {
+				
+				Tipo3 tipo3 = new Tipo3();
+				
 				double salario = 1100 + gerador.nextDouble() * 700;
 				double percentualComissao = 0.2 + gerador.nextDouble() * 0.5;
 				double bonus = gerador.nextDouble();
 				
-				empregados.get(i).setSalario(salario);
-				empregados.get(i).setPercentualComissao(percentualComissao);
-				empregados.get(i).setBonus(bonus);
+				tipo3.setSalario(salario);
+				tipo3.setPercentualComissao(percentualComissao);
+				tipo3.setBonus(bonus);
+				
+				empregados.add(tipo3);
+				
 			}else if(tipo == 4) {
+				
+				Tipo4 tipo4 = new Tipo4();
+				
 				double bonus = 2000 + gerador.nextDouble() + 2500;
 				
-				empregados.get(i).setBonus(bonus);
+				tipo4.setBonus(bonus);
+				
+				empregados.add(tipo4);
 			}
 			
 		}
 		
 		for(Empregado e: empregados) {
-			System.out.println("Tipo do empregado: " + e.getTipo());
+			System.out.println("Tipo do empregado: " + e.getValorAReceber());
 			
-			double salarioFinal = e.getValorAReceber(e.getTipo(), e.getSalario(), e.getPercentualComissao(), e.getBonus());
-			
-			e.setSalario(salarioFinal);
-			
-			System.out.println("Salario a receber: " + String.format("R$ %.2f", salarioFinal) + "\n");
 		}
 		
 	
