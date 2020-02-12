@@ -1,9 +1,19 @@
-package poo;
+package br.com.poo.aula1;
 
 public class Tipo3 extends Empregado{
 
 	private double percentualComissao;
 	private double bonus;
+	
+	
+	public Tipo3() {}
+
+	public Tipo3(double salario, double percentualComissao, double bonus) {
+		super();
+		this.percentualComissao = percentualComissao;
+		this.bonus = bonus;
+	}
+	
 	
 	public double getPercentualComissao() {
 		return percentualComissao;

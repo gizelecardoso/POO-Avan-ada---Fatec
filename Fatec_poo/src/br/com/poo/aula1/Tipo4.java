@@ -1,8 +1,14 @@
-package poo;
+package br.com.poo.aula1;
 
 public class Tipo4 extends Empregado{
 
 	private double bonus;
+	
+	public Tipo4() {}
+
+	public Tipo4(double bonus) {
+		this.bonus = bonus;
+	}
 	
 
 	public double getBonus() {

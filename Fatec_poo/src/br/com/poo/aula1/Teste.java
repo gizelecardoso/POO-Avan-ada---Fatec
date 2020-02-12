@@ -1,4 +1,4 @@
-package poo;
+package br.com.poo.aula1;
 
 import java.util.ArrayList;
 import java.util.List;
