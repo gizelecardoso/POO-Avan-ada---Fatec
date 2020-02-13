@@ -1,13 +1,13 @@
 package br.com.poo.aula1;
 
-public class Tipo2 extends Empregado {
+public class EmpregadoAssalariadoComissionado extends EmpregadoAssalariado {
 
 	private double percentualComissao;
 
-	public Tipo2() {}
+	public EmpregadoAssalariadoComissionado() {}
 
-	public Tipo2(double salario, double percentualComissao) {
-		super();
+	public EmpregadoAssalariadoComissionado(double salario, double percentualComissao) {
+		super(salario);
 		this.percentualComissao = percentualComissao;
 	}
 

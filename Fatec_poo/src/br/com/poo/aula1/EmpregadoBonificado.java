@@ -1,12 +1,12 @@
 package br.com.poo.aula1;
 
-public class Tipo4 extends Empregado{
+public class EmpregadoBonificado extends Empregado{
 
 	private double bonus;
 	
-	public Tipo4() {}
+	public EmpregadoBonificado() {}
 
-	public Tipo4(double bonus) {
+	public EmpregadoBonificado(double bonus) {
 		this.bonus = bonus;
 	}
 	
